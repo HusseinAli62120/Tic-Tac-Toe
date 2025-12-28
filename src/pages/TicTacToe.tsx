@@ -74,8 +74,10 @@ const TicTacToe = () => {
 
       <button
         onClick={resetGame}
-        className="px-6 py-3  bg-linear-to-r from-blue-400 to-rose-400 hover:from-blue-500 hover:to-rose-500
-         text-white font-bold rounded-lg shadow-lg transform transition hover:-translate-y-0.5 active:translate-y-0 active:shadow-md ring-2 ring-blue-500/20"
+        className={`px-6 py-3  bg-linear-to-r from-blue-400 to-rose-400 hover:from-blue-500 hover:to-rose-500
+         text-white font-bold rounded-lg shadow-lg transform ${
+           winner ? "scale-105" : "scale-0"
+         } transition-transform  hover:-translate-y-0.5 active:translate-y-0 active:shadow-md ring-2 ring-blue-500/20`}
       >
         Reset Game
       </button>
